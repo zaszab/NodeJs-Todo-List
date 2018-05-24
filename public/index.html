@@ -1,0 +1,29 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>VueJS NodeJS and Express  Todo App</title>
+  
+  </head>
+  <body>
+    <app></app>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAeO48iALWpR1z4No4OzR-Mb3KVl9zVuBk",
+        authDomain: "todo-demo2-65455.firebaseapp.com",
+        databaseURL: "https://todo-demo2-65455.firebaseio.com",
+        projectId: "todo-demo2-65455",
+        storageBucket: "todo-demo2-65455.appspot.com",
+        messagingSenderId: "166133167940"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script src="/build/bundle.js"></script>
+  </body>
+</html>
