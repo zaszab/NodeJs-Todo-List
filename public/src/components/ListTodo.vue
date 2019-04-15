@@ -50,11 +50,6 @@
 </template>
 
 <script>
-    import axios from 'axios';
-
-    import bus from './../bus.js'
-
-
     export default {
 
         data() {
