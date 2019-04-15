@@ -1,22 +1,19 @@
 {
   "name": "node-todo",
-  "version": "0.0.0",
-  "description": "Simple todo application.",
+  "version": "0.1.0",
+  "description": "Simple todo application for Firebase.",
   "main": "index.js",
-  "author": "Samuel James",
+  "author": "Zajdo Szabolcs",
   "scripts": {
     "lint": "eslint .",
-    "serve": "firebase serve --only functions",
-    "shell": "firebase experimental:functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log",
+    "serve": "firebase serve",
+    "deploy": "firebase deploy",
     "build": "webpack"
   },
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.5.2",
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-css-only": "^4.3.1",
     "express": "~4.7.2",
     "firebase": "^5.0.3",
     "firebase-admin": "~5.8.1",
@@ -28,7 +25,6 @@
     "vue-axios": "^2.0.2"
   },
   "devDependencies": {
-    "prettier": "^1.9.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
@@ -38,6 +34,7 @@
     "eslint": "^4.12.0",
     "eslint-plugin-promise": "^3.6.0",
     "file-loader": "^1.1.4",
+    "prettier": "^1.9.2",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

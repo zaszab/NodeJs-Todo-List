@@ -5,21 +5,26 @@
 
             <h3>Todo Items</h3>
 
-            <div class="row mrb-10" v-for="todo in todos">
+            <div class="row mrb-10" v-for="todo in todos" v-bind:key="todo._id">
 
-                <div class="input-group m-b-5">
+                <div class="input-group">
 
-                    <span class="input-group-addon addon-right">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
                         <input type="checkbox" v-model="todo.done"
                                :checked="todo.done" :value="todo.done"
                                v-on:change="updateTodo(todo)"
-                               title="Mark as done?"/></span>
+                               title="Mark as done?"/>
+                        </span>
+                    </div>
 
                     <input type="text" class="form-control" :class="todo.done?'todo__done':''" v-model="todo.name"
                            @keypress="todo.editing=true" @keyup.enter="updateTodo(todo)">
 
-                    <span class="input-group-addon addon-left" title="Delete todo?"
+                    <div class="input-group-append">
+                        <span class="input-group-text" title="Delete todo?"
                           v-on:click="deleteTodo(todo._id)">X</span>
+                    </div>
 
                 </div>
 
